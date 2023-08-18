@@ -9,3 +9,6 @@ def data(request):
 
 def perizinan(request):
     return render(request,'perizinan.html')
+
+def laporan(request):
+    return render(request,'laporan.html')

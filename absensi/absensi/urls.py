@@ -37,7 +37,7 @@ urlpatterns = [
     # path('hapusizn/',views.hapusizin),
 
     # CRUD Laporan
-    # path('laporan/',views.laporan),
+    path('laporan/',views.laporan),
     # path('cetaklpr',views.cetaklpr),
     
 
