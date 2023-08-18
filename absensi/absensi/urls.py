@@ -20,24 +20,25 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
+    # Route untuk Biodata
     path('admin/', admin.site.urls),
     path('', views.index),
 
     # CRUD Biodata
     path('biodata/', views.data),
-    path('tambahbd/',views.tambahdt),
-    path('ubahdt/',views.ubahdt),
-    path('hapusdt/',views.hapusdt),
+    # path('tambahbd/',views.tambahdt),
+    # path('ubahdt/',views.ubahdt),
+    # path('hapusdt/',views.hapusdt),
 
     # CRUD Perizinan
     path('perizinan/',views.perizinan),
-    path('tambahizn/',views.tambahizin),
-    path('ubahizn/',views.ubahizin),
-    path('hapusizn/',views.hapusizin),
+    # path('tambahizn/',views.tambahizin),
+    # path('ubahizn/',views.ubahizin),
+    # path('hapusizn/',views.hapusizin),
 
     # CRUD Laporan
-    path('laporan/',views.laporan),
-    path('cetaklpr',views.cetaklpr)
-    # Route untuk Biodata
+    # path('laporan/',views.laporan),
+    # path('cetaklpr',views.cetaklpr),
+    
 
 ]

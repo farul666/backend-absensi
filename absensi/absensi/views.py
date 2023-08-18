@@ -6,3 +6,6 @@ def index(request):
 
 def data(request):
     return render(request,'biodata.html')
+
+def perizinan(request):
+    return render(request,'perizinan.html')
