@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Jenis, Biodata, Agama
+from .models import *
 
 class kolomdata(admin.ModelAdmin):
     list_display = ['nip','nama','username','mapel','jk','agama','password','alamat']
