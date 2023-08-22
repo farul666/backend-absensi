@@ -35,9 +35,9 @@ urlpatterns = [
 
     # CRUD Perizinan
     path('perizinan/',views.perizinan),
-    # path('tambahizn/',views.tambahizin),
-    # path('ubahizn/',views.ubahizin),
-    # path('hapusizn/',views.hapusizin),
+    # path('tambahizn/',tambahizn),
+    # path('ubahizn/',ubahizn),
+    # path('hapusizn/',hapusizn),
 
     # CRUD Laporan
     path('laporan/',views.laporan),

@@ -1,4 +1,5 @@
 from django.db import models
+from biodata.models import Biodata
 
 # NIP,nama,status,Waktu,tanggal
 

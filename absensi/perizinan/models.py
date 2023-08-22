@@ -1,11 +1,11 @@
 from django.db import models
 
-# NIP, Nama, Username, Mata Pelajaran yang diampu, Jenis kelamin, Alamat, Agama, Password
+# nama, tanggal awal izin & tangggal akhir izin serta keterangan
 
 
 class Perizinan(models.Model):
     nama=models.CharField(max_length=50)
-    tglawal=models.DateField()
+    tglawal=models.DateField(auto_now_add=True)
     tglakhir=models.DateField()
     keterangan=models.CharField(max_length=250)
 
