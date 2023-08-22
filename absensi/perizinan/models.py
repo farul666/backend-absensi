@@ -5,7 +5,7 @@ from django.db import models
 
 class Perizinan(models.Model):
     nama=models.CharField(max_length=50)
-    tglawal=models.DateField()
+    tglawal=models.DateField(auto_now_add=True)
     tglakhir=models.DateField()
     keterangan=models.CharField(max_length=250)
 
