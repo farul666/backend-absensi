@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .import views
+from . import views
+from biodata.views import *
+from perizinan.views import *
+from presensi.views import *
 
 urlpatterns = [
     # Route untuk Biodata
@@ -26,9 +29,9 @@ urlpatterns = [
 
     # CRUD Biodata
     path('biodata/', views.data),
-    # path('tambahbd/',views.tambahdt),
-    # path('ubahdt/',views.ubahdt),
-    # path('hapusdt/',views.hapusdt),
+    path('tambahbd/',tambahdt),
+    path('ubahdt/',ubahdt),
+    path('hapusdt/',hapusdt),
 
     # CRUD Perizinan
     path('perizinan/',views.perizinan),
