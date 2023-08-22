@@ -1,6 +1,6 @@
 from django.db import models
 
-# NIP, Nama, Username, Mata Pelajaran yang diampu, Jenis kelamin, Alamat, Agama, Password
+# nama, tanggal awal izin & tangggal akhir izin serta keterangan
 
 
 class Perizinan(models.Model):
