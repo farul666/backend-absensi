@@ -13,6 +13,17 @@
                     <form style="margin: 40px;" action="">
                         {% csrf_token %}
                         {{form.as_table}}
+                        <div class="btn-simpan my-4" style="display: flex;">
+                            <a href="#" style="margin-right: auto;" class="btn btn-danger">
+                                <span class="text">Kembali</span>
+                            </a>
+                            <a href="#" class="btn btn-success btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>
