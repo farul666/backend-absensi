@@ -28,10 +28,10 @@ urlpatterns = [
     path('', views.index),
 
     # CRUD Biodata
-    path('biodata/', views.data),
+    path('biodata/', data),
     path('tambahbd/',tambahdt),
-    path('ubahdt/',ubahdt),
-    path('hapusdt/',hapusdt),
+    path('ubahdt/<int:id_biodata>',update_dt,name='update_dt'), 
+    path('hapusdt/<int:id_biodata>',hapusdt,name='hapusdt'),
 
     # CRUD Perizinan
     path('perizinan/',views.perizinan),
@@ -42,6 +42,5 @@ urlpatterns = [
     # CRUD Laporan
     path('laporan/',views.laporan),
     # path('cetaklpr',views.cetaklpr),
-    
 
 ]
