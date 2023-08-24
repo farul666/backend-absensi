@@ -46,7 +46,7 @@ def ubahdt(request,id_biodata) :
             'form' : form,
             'biodatas':biodatas
         }
-    return render(request,'Biodata/ubad_bd.html',konteks) 
+    return render(request,'Biodata/ubah_bd.html',konteks) 
 
 #Method untuk menghapus data pada tabel biodata
 def hapusdt(request, id_biodata ):

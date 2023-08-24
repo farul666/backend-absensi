@@ -27,6 +27,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
 
+    #CRUD Absensi
+    #path('absensi/',views.absensi),
+
     # CRUD Biodata
     path('biodata/', views.data),
     path('tambahbd/',tambahdt),
@@ -34,14 +37,18 @@ urlpatterns = [
     path('hapusdt/',hapusdt),
 
     # CRUD Perizinan
-    path('perizinan/',views.perizinan),
+    # path('perizinan/',perizinan),
     # path('tambahizn/',tambahizn),
     # path('ubahizn/',ubahizn),
     # path('hapusizn/',hapusizn),
 
+    #CRUD presensi
+    path('presensi/',presensi),
+
+
     # CRUD Laporan
-    path('laporan/',views.laporan),
-    # path('cetaklpr',views.cetaklpr),
+    # path('laporan/',laporan),
+    # path('cetaklpr',cetaklpr),
     
 
 ]

@@ -7,8 +7,3 @@ def index(request):
 def data(request):
     return render(request,'Biodata/data_bd.html')
 
-def perizinan(request):
-    return render(request,'Perizinan/data_izin.html')
-
-def laporan(request):
-    return render(request,'laporan.html')
