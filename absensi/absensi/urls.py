@@ -37,10 +37,10 @@ urlpatterns = [
     path('hapusdt/<int:id_biodata>',hapusdt,name='hapusdt'),
 
     # CRUD Perizinan
-    # path('perizinan/',perizinan),
-    # path('tambahizn/',tambahizn),
-    # path('ubahizn/',ubahizn),
-    # path('hapusizn/',hapusizn),
+    path('perizinan/',data_izin),
+    path('tambahizin/',add_izin),
+    path('ubahizin/<int:id_perizinan>',update_izin,name='update_izin'),
+    path('hapusizin/<int:id_perizinan>',hapus_izin,name='hapus_izin'),
 
     #CRUD presensi
     path('presensi/',presensi),
