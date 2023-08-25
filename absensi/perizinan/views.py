@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+from django.shortcuts import render, redirect
+from perizinan.forms import FormPerizinan
+from perizinan.models import Perizinan
+from django.contrib import messages
+
+def data_izin(request):
+    perizinan=Perizinan.object.all()
+
+    konteks={
+        'perizinan':perizinan,
+    }
+    return render (request,'Perizinan/index.html',konteks)
+
+# Method untuk menambahkan data
+# def tambah_izin(request):
+#     form = FormPerizinan(request.POST)
+#     if form.is_valid():
+#         form.save()
+#         messages.success(request,"Data berhasil ditambahkan")
+#         form = FormPerizinan()
+#         konteks={
+#             'form' : form
+#         }
+=======
 # from django.shortcuts import render, redirect
 # from perizinan.forms import FormPerizinan
 # from perizinan.models import Perizinan
@@ -24,11 +49,15 @@
 #             'form' : form,
 #         }
 #         return render(request,'Biodata/add_bd.html',konteks)
+>>>>>>> farul666/main
 #     else:
 #         form=FormPerizinan()
 #         konteks = {
 #             'form' : form,
 #         }
+<<<<<<< HEAD
+#     return render(request,'Perizinan/add_izin.html',konteks)
+=======
 #     return render(request,'Perizinan/add_izin.html',konteks)
 
 # #Method untuk edit data pada tabel biodata
@@ -54,3 +83,4 @@
 #     perizinan.delete()
 #     messages.success(request ,"Data telah di hapus ")
 #     return redirect ('/perizinan')
+>>>>>>> farul666/main

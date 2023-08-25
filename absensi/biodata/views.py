@@ -6,7 +6,7 @@ from django.contrib import messages
 
 # Method untuk menampilkan data pada app Biodata yang terdapat pada database
 def data(request):
-    biodata=Biodata.object.all()
+    biodata=Biodata.objects.all()
 
     konteks={
         'biodata':biodata,
@@ -18,7 +18,7 @@ def tambahdt(request):
     form = FormBiodata(request.POST)
     if form.is_valid():
         form.save()
-        messages.succes(request,"Data berhasil ditambahkan",)
+        messages.success(request,"Data berhasil ditambahkan")
         form = FormBiodata()
         konteks = {
             'form' : form,
@@ -32,14 +32,14 @@ def tambahdt(request):
     return render(request,'Biodata/add_bd.html',konteks)
 
 #Method untuk edit data pada tabel biodata
-def ubahdt(request,id_biodata) :
-    biodatas=Biodata.obejcts.get(id=id_biodata)
+def update_dt(request,id_biodata) :
+    biodatas=Biodata.objects.get(id=id_biodata)
     if request.POST:
         form = FormBiodata(request.POST,instance=biodatas)
         if form.is_valid():
             form.save()
             messages.success (request , "Data Berhasil Diubah")
-            return redirect('Biodata_Edit',id_biodata=id_biodata)
+            return redirect('update_dt',id_biodata=id_biodata)
     else:
         form=FormBiodata(instance=biodatas)
         konteks = {
