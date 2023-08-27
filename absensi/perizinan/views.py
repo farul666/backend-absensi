@@ -2,13 +2,18 @@ from django.shortcuts import render, redirect
 from perizinan.forms import FormPerizinan
 from perizinan.models import Perizinan
 from django.contrib import messages
+from biodata.models import Biodata
+# from django.http import JsonResponse
+
 
 def data_izin(request):
     perizinan=Perizinan.objects.all()
-
+    biodata=Biodata.objects.all()
     konteks={
         'perizinan':perizinan,
+        'biodata':biodata,
     }
+    # return JsonResponse(konteks, status=200, safe=False)
     return render (request,'Perizinan/data_izin.html',konteks)
 
 # Method untuk menambahkan data pada tabel perizinan

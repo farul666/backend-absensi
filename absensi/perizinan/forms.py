@@ -9,6 +9,6 @@ class FormPerizinan(ModelForm):
         fields='__all__'
 
         widgets = {
-            'nama':forms.TextInput({'class':'form-control'}),
+            'nama':forms.Select({'class':'form-control'}),
             'keterangan':forms.TextInput({'class':'form-control'}),
         }
