@@ -12,7 +12,7 @@ class Absensi(models.Model):
 
 
     def __str__(self):
-        return "{}.{}".format(self.nama)
+        return self.nama
     
    
 
