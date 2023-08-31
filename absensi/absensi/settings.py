@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'presensi',
     'biodata',
     'perizinan',
+    'absensi',
 ]
 
 MIDDLEWARE = [

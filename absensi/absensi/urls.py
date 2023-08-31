@@ -28,7 +28,10 @@ urlpatterns = [
     path('', views.index),
 
     #CRUD Absensi
-    #path('absensi/',views.absensi),
+    path('absensi/',views.data_absensi),
+    path('tambahabsensi/',views.tambah_absensi),
+    # path('ubahabsensi/<int:id_absensi>',views.update_absensi,name='update_absensi'),
+    # path('hapusabsensi/<int:id_absensi>',views.hapus_absensi,name='hapus_absensi'),
 
     # CRUD Biodata
     path('biodata/', data),
