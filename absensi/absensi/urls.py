@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from . import views
+from absen.views import *
 from biodata.views import *
 from perizinan.views import *
 from presensi.views import *
@@ -28,8 +29,8 @@ urlpatterns = [
     path('', views.index),
 
     #CRUD Absensi
-    path('absensi/',views.data_absensi),
-    path('tambahabsensi/',views.tambah_absensi),
+    path('absensi/',data_absensi),
+    path('tambahabsensi/',tambah_absensi),
     # path('ubahabsensi/<int:id_absensi>',views.update_absensi,name='update_absensi'),
     # path('hapusabsensi/<int:id_absensi>',views.hapus_absensi,name='hapus_absensi'),
 
@@ -47,6 +48,10 @@ urlpatterns = [
 
     #CRUD presensi
     path('presensi/',presensi),
+    path('tambahpre/',tambahpresensi),
+    path('ubahpre/<int:id_presensi>',update_pre,name='update_pre'),
+    path('hapuspre/<int:id_presensi>',hapuspresensi,name='hapuspresensi'),
+
 
 
     # CRUD Laporan
