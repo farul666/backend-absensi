@@ -9,7 +9,6 @@ class FormPresensi(ModelForm):
         fields='__all__'
 
         widgets = {
-            'nip':forms.TextInput({'class':'form-control'}),
-            'nama':forms.TextInput({'class':'form-control'}),
-            'username':forms.TextInput({'class':'form-control'}),
+            'nama':forms.Select({'class':'form-control'}),
+            'status':forms.TextInput({'class':'form-control'}),
         }
