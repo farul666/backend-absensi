@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 
 class kolomdata(admin.ModelAdmin):
-    list_display = ['nama','tgl','keterangan']
+    list_display = ['nama']
     search_fields = ['nama']
     list_filter = ('nama',)
     list_per_page = 7

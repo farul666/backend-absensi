@@ -1,6 +1,4 @@
-from typing import Any
 from django.db import models
-from datetime import datetime, date
 from biodata.models import Biodata
 
 # nama, tanggal awal izin & tangggal akhir izin serta keterangan
@@ -13,7 +11,7 @@ class Perizinan(models.Model):
 
 
     def __str__(self):
-        return self.nama
+         return self.nama
     
    
 

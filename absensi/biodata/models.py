@@ -27,3 +27,7 @@ class Biodata(models.Model):
     agama=models.ForeignKey(Agama, on_delete=models.CASCADE,null=True)
     password=models.CharField(max_length=50)
     alamat=models.TextField()
+
+    def __str__(self):
+        return str(self.nama)
+        
