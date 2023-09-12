@@ -6,11 +6,11 @@ from datetime import datetime
 class Presensi(models.Model):
     nama=models.ForeignKey(Biodata,on_delete=models.CASCADE,null=True)
     status=models.CharField(max_length=10)
-    tgl=models.DateTimeField(auto_now_add=True)
+    tgl=models.DateTimeField(default=datetime.now, blank=True)
 
 
     def __str__(self):
-        return str(self.nama)
+        return self.nama.nip
     
 
 
