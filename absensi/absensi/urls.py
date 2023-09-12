@@ -31,8 +31,7 @@ urlpatterns = [
     #CRUD Absensi
     path('absensi/',data_absensi),
     path('tambahabsensi/',tambah_absensi),
-    # path('ubahabsensi/<int:id_absensi>',views.update_absensi,name='update_absensi'),
-    # path('hapusabsensi/<int:id_absensi>',views.hapus_absensi,name='hapus_absensi'),
+    path('hapus_absen/<int:id_absen>',hapus_absensi,name='hapus_absensi'),
 
     # CRUD Biodata
     path('biodata/', data),
@@ -49,7 +48,6 @@ urlpatterns = [
     #CRUD presensi
     path('presensi/',presensi),
     path('tambahpre/',tambahpresensi),
-    path('ubahpre/<int:id_presensi>',update_pre,name='update_pre'),
     path('hapuspre/<int:id_presensi>',hapuspresensi,name='hapuspresensi'),
 
 

@@ -29,26 +29,9 @@ def tambah_absensi(request):
         }
     return render(request,'Absensi/add_absensi.html',konteks)
 
-#Method untuk edit data pada tabel biodata
-def update_absensi(request,id_absensi) :
-    absensi=Absen.objects.get(id=id_absensi)
-    if request.POST:
-        form = FormAbsen(request.POST,instance=absensi)
-        if form.is_valid():
-            form.save()
-            messages.success (request , "Data Berhasil Diubah")
-            return redirect('update_dt',id_absensi=id_absensi)
-    else:
-        form=FormAbsen(instance=absensi)
-        konteks = {
-            'form' : form,
-            'biodatas':absensi
-        }
-    return render(request,'Absensi/ubah_absensi.html',konteks) 
-
 #Method untuk menghapus data pada tabel biodata
-def hapus_absensi(request, id_absensi ):
-    absensi=Absen.objects.get(id=id_absensi )
+def hapus_absensi(request, id_absen ):
+    absensi=Absen.objects.get(id=id_absen )
     absensi.delete()
     messages.success(request ,"Data telah di hapus ")
     return redirect ('/absensi')
