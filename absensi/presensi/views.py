@@ -33,24 +33,6 @@ def tambahpresensi(request):
         }
     return render(request,'Presensi/add_presensi.html',konteks)
 
-# method untuk edit data pada app presensi
-def update_pre(request,id_presensi):
-    presensi=Presensi.objects.get(id=id_presensi)
-    if request.POST:
-        form = FormPresensi(request.POST,instance=presensi)
-        if form.is_valid():
-            form.save()
-            messages.success(request,"Data berhasil diubah")
-            return redirect('update_pre',id_presensi=id_presensi)
-        else:
-            form=FormPresensi(instance=presensi)
-            konteks ={
-                'form' :form,
-                'presensi' :presensi
-            }
-        return render(request,'Presensi/ubah_presensi.html',konteks)
-    
-
 # method untuk menghapusn data pada app presensi
 def hapuspresensi(request,id_presensi):
     presensi =Presensi.objects.get(id=id_presensi)
