@@ -22,6 +22,7 @@ from absen.views import *
 from biodata.views import *
 from perizinan.views import *
 from presensi.views import *
+from rekapitulasi.views import *
 
 urlpatterns = [
     # Route untuk Biodata
@@ -53,7 +54,7 @@ urlpatterns = [
 
 
     # CRUD Laporan
-    # path('laporan/',laporan),
+    path('laporan/',rekap_data),
     # path('cetaklpr',cetaklpr),
 
 ]

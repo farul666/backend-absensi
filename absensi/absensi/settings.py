@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'perizinan',
     'absensi',
     'absen',
+    'rekapitulasi',
 ]
 
 MIDDLEWARE = [
