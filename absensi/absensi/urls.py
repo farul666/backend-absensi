@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 from absen.views import *
@@ -27,7 +27,7 @@ from rekapitulasi.views import *
 urlpatterns = [
     # Route untuk Biodata
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('home/', views.index),
 
     #CRUD Absensi
     path('absensi/',data_absensi),
@@ -51,10 +51,16 @@ urlpatterns = [
     path('tambahpre/',tambahpresensi),
     path('hapuspre/<int:id_presensi>',hapuspresensi,name='hapuspresensi'),
 
-
-
     # CRUD Laporan
     path('laporan/',rekap_data),
     # path('cetaklpr',cetaklpr),
+
+    # Login and Register
+    path('register/',views.daftar),
+    path('',views.masuk),
+    path('logout/',views.keluar),
+
+    # Path dibawah ini berfungsi untuk memasukkan urls pada app authentication
+    path('',include('django.contrib.auth.urls')),
 
 ]
