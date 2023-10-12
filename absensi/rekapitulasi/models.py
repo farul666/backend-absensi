@@ -10,5 +10,11 @@ class Rekap(models.Model):
     presensi_id=models.ForeignKey(Presensi,on_delete=models.CASCADE)
     perizinan_id=models.ForeignKey(Perizinan,on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.nama.nip
+    def total_rekap(self):
+        self.absen_id=self.nama.absen_set.count()
+        self.presensi_id=self.nama.presensi_set.count()
+        self.perizinan_id=self.nama.perizinan_set.count()
+
+    def save(self, *args, **kwargs):
+        self.total_rekap()
+        super().save(*args, **kwargs)
