@@ -26,29 +26,33 @@
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Waktu Masuk</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
+                            <th>Jumlah Masuk</th>
+                            <th>Jumlah Presensi</th>
+                            <th>Jumlah Perizinan</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Waktu Masuk</th>
-                            <th>Status</th>
-                            <th>Aksi</th>
+                            <th>Jumlah Masuk</th>
+                            <th>Jumlah Presensi</th>
+                            <th>Jumlah Perizinan</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        {% for Rekap in rekap  %}
-                        <tr>
-                            <td>{{ Rekap.id }}</td>
-                            <td>{{ Rekap.nama.nama }}</td>
-                            <td>{{ Rekap.absen }}</td>
-                            <td>{{ Rekap.perizinan }}</td>
-                            <td>{{ Rekap.presensi }}</td>
-                        </tr>
+                        {% for data in biodata %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ data.nama }}</td>
+                                <td>{{ data.absen_set.count }}</td>
+                                <td>{{ data.presensi_set.count }}</td>
+                                <td>{{ data.perizinan_set.count }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="5">No data available</td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
