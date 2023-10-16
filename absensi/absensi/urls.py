@@ -23,6 +23,7 @@ from biodata.views import *
 from perizinan.views import *
 from presensi.views import *
 from rekapitulasi.views import *
+from user.views import *
 
 urlpatterns = [
     # Route untuk Biodata
@@ -62,5 +63,8 @@ urlpatterns = [
 
     # Path dibawah ini berfungsi untuk memasukkan urls pada app authentication
     path('',include('django.contrib.auth.urls')),
+
+    # Path User
+    path('cobauser/',homeuser),
 
 ]

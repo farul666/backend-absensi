@@ -1,0 +1,28 @@
+{% extends 'User/base_user.html' %}
+{% load static %}
+{% block isi %}
+    <div class="container">
+        <div class="home">
+            <h2>Presensi</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Waktu Masuk</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for Presensi in presensi  %}
+                        <tr>
+                            <td>{{ Presensi.nama.nama }}</td>
+                            <td>{{ Presensi.tgl }}</td>
+                            <td>{{ Presensi.status }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    </div>
+{% endblock %}
